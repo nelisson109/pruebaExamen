@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6217ae3b-af72-4dc8-b7fd-2e96d20e1aa8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/martin/Views/Filter/FiltrarNombre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/esqueleto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/esqueleto.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/martin/Logica/Logica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/martin/Logica/Logica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/martin/Views/DialogoPersona.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/martin/Views/DialogoPersona.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/martin/Views/DialogoPersonaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/martin/Views/DialogoPersonaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/martin/Views/PantallaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/martin/Views/PantallaPrincipal.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/martin/Views/PantallaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/martin/Views/PantallaPrincipalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

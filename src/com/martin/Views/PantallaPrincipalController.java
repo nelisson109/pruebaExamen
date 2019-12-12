@@ -2,6 +2,7 @@ package com.martin.Views;
 
 import com.martin.Logica.Logica;
 import com.martin.Models.Persona;
+import com.martin.Views.Filter.FiltrarNombre;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,6 +18,8 @@ public class  PantallaPrincipalController extends BaseController implements Init
     @FXML
     private TextField tfFiltro;
 
+    private FiltrarNombre filtro;
+
     @FXML
     private TableView<Persona> tvPersonas;
 
@@ -26,7 +29,11 @@ public class  PantallaPrincipalController extends BaseController implements Init
 
     }
 
-    public void gestionarPersonas(){
+    @FXML
+    public void filtrar(ActionEvent event){
+        String nombre = tfFiltro.getText();
+        filtro = new FiltrarNombre(Logica.getInstance().getListaPersonas());
+        tvPersonas.setItems(filtro.filtrar(nombre));
 
     }
 
@@ -35,18 +42,19 @@ public class  PantallaPrincipalController extends BaseController implements Init
         DialogoPersonaController controller = (DialogoPersonaController) cargarDialogo("DialogoPersona.fxml", 400, 300);
         controller.getStage().setTitle("Gestionar Personas");
         controller.abrirDialogo(true);//espera qie le demos a guardar
+        tvPersonas.setItems(Logica.getInstance().getListaPersonas());
 
     }
     @FXML
     public void modificar(ActionEvent event){
         Persona persona = tvPersonas.getSelectionModel().getSelectedItem();
-        int indice = Logica.getInstance().getListaPersonas().indexOf(persona);
         DialogoPersonaController controller = (DialogoPersonaController) cargarDialogo("DialogoPersona.fxml", 400, 300);
+        controller.setPersonaModificar(persona);
         controller.getStage().setTitle("Gestionar Personas");
         controller.abrirDialogo(true);//espera el guardado
         //luego borro la seleccionada y añado en esa posicion
 
-        Logica.getInstance().modificar(persona, indice);
+        tvPersonas.setItems(Logica.getInstance().getListaPersonas());
     }
 
     @FXML
