@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.martin.Views.PantallaPrincipalController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Filtro por nombre" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <TextField fx:id="tfFiltro" layoutX="139.0" layoutY="10.0" AnchorPane.leftAnchor="139.0" AnchorPane.topAnchor="10.0" />
+      <TableView fx:id="tvPersonas" layoutY="43.0" prefHeight="301.0" prefWidth="600.0" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0">
+        <columns>
+            <TableColumn fx:id="tcNombre" prefWidth="212.0" text="Nombre">
+                <cellValueFactory>
+                    <PropertyValueFactory property="nombre" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tcApellidos" prefWidth="215.0" text="Apellidos">
+                <cellValueFactory>
+                    <PropertyValueFactory property="apellido" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tcEdad" prefWidth="172.0" text="Edad">
+                <cellValueFactory>
+                    <PropertyValueFactory property="edad" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="btnAñadir" layoutX="162.0" layoutY="353.0" mnemonicParsing="false" onAction="#add" text="Añadir" />
+      <Button fx:id="btnModificar" layoutX="256.0" layoutY="353.0" mnemonicParsing="false" onAction="#modificar" text="Modificar" />
+      <Button fx:id="btnEliminar" layoutX="364.0" layoutY="353.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+   </children>
+</AnchorPane>
