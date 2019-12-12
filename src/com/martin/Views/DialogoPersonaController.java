@@ -34,12 +34,17 @@ public class DialogoPersonaController extends BaseController implements Initiali
         nombre = tfNombre.getText();
         apellido = tfApellidos.getText();
         edad = Integer.parseInt(tfEdad.getText());
-        persona = new Persona(nombre, apellido, edad);
-        Logica.getInstance().añadir(persona);
+      //  persona = new Persona(nombre, apellido, edad);
+      //  Logica.getInstance().añadir(persona);
+        getStage().close();
+    }
+
+    @FXML
+    public void guardarModificacion(ActionEvent event){
+
     }
     @FXML
     public void cancelar(ActionEvent event){
         getStage().close();
     }
-
 }

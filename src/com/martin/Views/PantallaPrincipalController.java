@@ -13,7 +13,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PantallaPrincipalController extends BaseController implements Initializable {
+public class  PantallaPrincipalController extends BaseController implements Initializable {
     @FXML
     private TextField tfFiltro;
 
@@ -26,23 +26,34 @@ public class PantallaPrincipalController extends BaseController implements Initi
 
     }
 
+    public void gestionarPersonas(){
+
+    }
+
     @FXML
     public void add(ActionEvent event){
-        DialogoPersonaController controller = (DialogoPersonaController) cargarDialogo("DialogoPersona", 200, 300);
+        DialogoPersonaController controller = (DialogoPersonaController) cargarDialogo("DialogoPersona.fxml", 400, 300);
         controller.getStage().setTitle("Gestionar Personas");
         controller.abrirDialogo(true);//espera qie le demos a guardar
+
     }
     @FXML
     public void modificar(ActionEvent event){
-        DialogoPersonaController controller = (DialogoPersonaController) cargarDialogo("DialogoPersona", 200, 300);
+        Persona persona = tvPersonas.getSelectionModel().getSelectedItem();
+        int indice = Logica.getInstance().getListaPersonas().indexOf(persona);
+        DialogoPersonaController controller = (DialogoPersonaController) cargarDialogo("DialogoPersona.fxml", 400, 300);
         controller.getStage().setTitle("Gestionar Personas");
         controller.abrirDialogo(true);//espera el guardado
         //luego borro la seleccionada y añado en esa posicion
+
+        Logica.getInstance().modificar(persona, indice);
     }
 
     @FXML
     public void eliminar(ActionEvent event){
-
+        Persona persona;
+        persona  = tvPersonas.getSelectionModel().getSelectedItem();
+        Logica.getInstance().borrar(persona);
     }
 
 }

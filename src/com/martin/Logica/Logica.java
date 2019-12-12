@@ -27,5 +27,13 @@ public class Logica {
         listaPersonas.add(persona);
     }
 
+    public void borrar(Persona persona){
+        listaPersonas.remove(persona);
+    }
+
+    public void modificar(Persona persona, int indice){
+        listaPersonas.set(indice, persona);
+    }
+
 
 }

@@ -13,7 +13,8 @@
       <TextField fx:id="tfNombre" layoutX="159.0" layoutY="74.0" />
       <TextField fx:id="tfApellidos" layoutX="159.0" layoutY="107.0" />
       <TextField fx:id="tfEdad" layoutX="159.0" layoutY="143.0" />
-      <Button fx:id="btnGuardar" layoutX="99.0" layoutY="231.0" mnemonicParsing="false" onAction="#guardar" text="Guardar" />
-      <Button fx:id="btnCancelar" layoutX="216.0" layoutY="231.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+      <Button fx:id="btnGuardar" layoutX="64.0" layoutY="231.0" mnemonicParsing="false" onAction="#guardar" text="Guardar" AnchorPane.bottomAnchor="50.0" />
+      <Button fx:id="btnCancelar" layoutX="277.0" layoutY="231.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" AnchorPane.bottomAnchor="50.0" />
+      <Button fx:id="btnGuardarModificado" layoutX="147.0" layoutY="231.0" mnemonicParsing="false" onAction="#guardarModificacion" text="GuardarModificado" AnchorPane.bottomAnchor="50.0" />
    </children>
 </AnchorPane>

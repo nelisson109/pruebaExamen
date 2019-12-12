@@ -4,7 +4,7 @@ module esqueleto {
     requires javafx.fxml;
     requires javafx.web;
     requires java.base;
-  //  requires org.controlsfx.controls;
+    requires org.controlsfx.controls;
 
   //  requires java.mail;
    // requires commons.email;
